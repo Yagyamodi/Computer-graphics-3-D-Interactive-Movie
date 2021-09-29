@@ -1,0 +1,1273 @@
+#VRML V2.0 utf8
+
+#Background
+DEF WhiteBackground Background {
+    skyColor [
+        .969 .596 .384
+    ]
+    skyAngle [ 1.309, 1.571 ]
+    groundColor [
+        0.7 0.7 0.7
+    ]
+    groundAngle [ 1.309, 1.571 ]
+}
+
+DEF Viewp Viewpoint {
+    position -50 10 90
+}
+
+Sound {
+   minFront 10
+   minBack 10
+   maxFront 50
+   maxBack 50
+   source DEF SOUND AudioClip {
+      url "VRML/WhatsApp Video 2020-09-13 at 1.38.03 PM.wav"
+   }
+}
+
+
+#Land
+DEF Land Transform {
+   translation -80 0 -120
+   scale 1.5 1.5 1.7
+   children [
+      Inline {
+         url      "VRML/Land.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+Transform {
+	translation -72 0 -50
+	scale 1.5 1.5 1.7
+	children [
+		DEF TheTouchSensor TouchSensor {}
+		
+		DEF PlayBox Transform {
+		   translation 0 0 2.6
+		   children [
+			    Shape {
+			      geometry Box {
+				size 6 5 0.1
+			      }
+			      appearance Appearance {
+				material Material {
+				  diffuseColor 0.9 .9 .9
+				}
+				texture  ImageTexture { url "VRML/play.jpg"}
+			      }
+			    }
+		     ]
+		}
+
+	    Shape {
+	      geometry Box {
+		size 6 5 5
+	      }
+	      appearance Appearance {
+		material DEF StatueBoxColor Material {
+		  diffuseColor 0.5 .5 .5
+		}
+	      }
+	    }
+	]
+}
+
+
+DEF Instruction Transform {
+	translation -62 -1.5 -46
+	scale 0.8 1 1
+	children [
+		Transform {
+		   translation 0 0 -1
+		   scale 3.5 1.2 1
+		   children [
+			    Shape {
+			      geometry Box {
+				size 6 4 0.2
+			      }
+			      appearance Appearance {
+				material Material {
+				  diffuseColor 1 1 1
+				  transparency 0.2
+				}
+			      }
+			    }
+		     ]
+		}
+		
+		  Shape {
+		    geometry Text {
+		      string [ "<<-- Click Box" "to play" ]
+		      fontStyle FontStyle {
+			justify [ "MIDDLE" "MIDDLE"  ] 
+			size 2
+			style "BOLD"
+		      }
+		    }
+		    appearance Appearance {
+		      material Material {
+			diffuseColor 0.8 0.1 0.4
+		      }
+		    }
+		  }
+	]
+}
+
+DEF Roll Transform {
+	translation -37.5 -1.5 56
+	scale 0.8 1 1
+	children [
+		Transform {
+		   translation 0 -1 -1
+		   scale 5.6 1.2 1
+		   children [
+			    Shape {
+			      geometry Box {
+				size 6 4 0.2
+			      }
+			      appearance Appearance {
+				material Material {
+				  diffuseColor 1 1 1
+				  transparency 0.2
+				}
+			      }
+			    }
+		     ]
+		}
+		
+		  Shape {
+		    geometry Text {
+		      string [ "Radhika Singh: 18075046" "Yagya Modi: 18075064" ]
+		      fontStyle FontStyle {
+			justify [ "MIDDLE" "MIDDLE"  ] 
+			size 2
+			style "BOLD"
+		      }
+		    }
+		    appearance Appearance {
+		      material Material {
+			diffuseColor 0.8 0.1 0.4
+		      }
+		    }
+		  }
+	]
+}
+
+#Mountains
+
+DEF Mount2 Transform {
+   translation -215 -4 -280
+   scale 9 14.5 10
+   children [
+      DEF Mountain2 Inline {
+         url      "VRML/Hill1.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+
+
+DEF Mount Transform {
+   translation 30 -8 -180
+   rotation 0 1 0 3.14
+   scale 110 60 45
+   children [
+      DEF Mountain Inline {
+         url      "VRML/Hill2.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+Transform{
+	translation 60 -7 -180
+	rotation 0 1 0 3.14
+	scale 100 60 45
+	children USE Mountain
+}
+
+
+Transform{
+	translation -210 -8 -300
+	scale 120 60 45
+	children USE Mountain
+}
+
+#Clouds
+DEF Cloud Transform {
+   scale .1 .1 .1
+   translation -44 5 -160
+   children [
+      Inline {
+         url      "VRML/clouds.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+DEF Cloud2 Transform {
+   scale .05 .05 .05
+   translation -114 17 -155
+   rotation 0 1 0 2.7
+   children [
+      Inline {
+         url      "VRML/clouds.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+
+#Flames
+DEF Flames Transform {
+   translation 3.4 2.5 -.8
+   scale 0 0 0
+   children [
+      Inline {
+         url      "VRML/Flames.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+DEF Flames2 Transform {
+   translation 0 -2 0
+   scale 0 0 0
+   children [
+      Inline {
+	 url      "VRML/Flames.wrl"
+	 bboxSize -1 -1 -1
+      }
+   ]
+}
+
+DEF Flames3 Transform {
+   translation 0 -2 -4
+   scale 0 0 0
+   children [
+      Inline {
+	 url      "VRML/Flames.wrl"
+	 bboxSize -1 -1 -1
+      }
+   ]
+}
+
+DEF Flames4 Transform {
+   translation 0 -2 0
+   scale 0 0 0
+   children [
+      Inline {
+	 url      "VRML/Flames.wrl"
+	 bboxSize -1 -1 -1
+      }
+   ]
+}
+
+DEF Flames5 Transform {
+   translation 2 -2 0
+   scale 0 0 0
+   children [
+      Inline {
+	 url      "VRML/Flames.wrl"
+	 bboxSize -1 -1 -1
+      }
+   ]
+}
+
+DEF Flames6 Transform {
+   translation 2 -2 -4
+   scale 0 0 0
+   children [
+      Inline {
+	 url      "VRML/Flames.wrl"
+	 bboxSize -1 -1 -1
+      }
+   ]
+}
+
+DEF Flames7 Transform {
+   translation -2 -2 -2
+   scale 0 0 0
+   children [
+      Inline {
+	 url      "VRML/Flames.wrl"
+	 bboxSize -1 -1 -1
+      }
+   ]
+}
+
+
+#Cannon
+
+DEF Tyre1 Transform {
+	rotation 1 0 0 1.57
+	translation 0 0 2
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.3 0.3 0.3
+				}
+			}
+		    geometry Cylinder {
+			height 0.4
+			radius 2
+		    }
+		}
+	]
+}
+
+DEF Tyre2 Transform {
+	rotation 1 0 0 1.57
+	translation 0 0 -2
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.3 0.3 0.3
+				}
+			}
+		    geometry Cylinder {
+			height 0.4
+			radius 2
+		    }
+		}
+	]
+}
+
+
+#JoinTyres
+DEF JoinTyre Transform {
+	rotation 1 0 0 1.57
+	translation 0 0 0
+	children[
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.3 0.3 0.3
+				}
+			}
+		    geometry Cylinder {
+			height 5
+			radius 0.4
+		    }
+		}
+	]
+}
+
+#SupportRod1
+DEF Rod1 Transform {
+	rotation 0 0 1 1.45
+	translation 1.3 0 1.3
+	scale	0.5 0.8 0.5
+	children[
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.3 0.3 0.3
+				}
+			}
+		    geometry Cylinder {
+			height 5
+			radius 0.4
+		    }
+		}
+	]
+}
+
+#SupportRod2
+DEF Rod2 Transform {
+	rotation 0 0 1 1.45
+	translation 1.3 0 -1.3
+	scale	0.5 0.8 0.5
+	children[
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.3 0.3 0.3
+				}
+			}
+		    geometry Cylinder {
+			height 5
+			radius 0.4
+		    }
+		}
+	]
+}
+
+#Cannon base 
+DEF CannonBase Transform {
+	children [
+		Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0.3 0.3 0.3
+			}
+		}
+		geometry IndexedFaceSet {
+		   coord Coordinate {
+		      point [  2.5 -2 2, 5 -2 2, 5 -2 -2, 2.5 -2 -2,
+			       2.5 1 2, 5 1 2, 5 1 -2, 2.5 1 -2,
+				3.5 1 -2, 3.5 1 2]
+		   }
+		   coordIndex [4 0 1 9 -1
+			       7 8 2 3 -1
+			       9 8 3 0 -1
+				8 9 1 2 -1
+			       0 3 2 1 -1 ]
+		   solid FALSE
+		}
+	}
+	]
+}
+
+
+DEF CannonBody Transform {
+	rotation 0 0 1 1.105
+	translation 1.3 2 0
+	children [
+
+		Shape {
+			appearance Appearance {
+				material DEF CannonColor Material {
+					diffuseColor 0.4 0.4 0.4
+				}
+			}
+		    geometry Cylinder {
+			height 9
+			radius 1.2
+		    }
+		}
+	]
+}
+
+
+DEF CannonPathway Transform {
+	rotation 0 0 1 1.105
+	translation 1.3 2 0
+	children [
+		Shape {
+			appearance Appearance {
+				material DEF CannonPathwayColor Material {
+					diffuseColor 0.2 0.2 0.2
+				}
+			}
+		    geometry Cylinder {
+			height 9.05
+			radius 0.8
+		    }
+		}
+	]
+}
+
+
+DEF CannonCap Transform {
+	rotation 0 0 1 2.677
+	translation 3.5 2.5 0
+	children [
+		Shape {
+			appearance Appearance {
+				material DEF CannonColor Material {
+					diffuseColor 0.4 0.4 0.4
+				}
+			}
+		    geometry Cylinder {
+			height 0.8
+			radius 0.4
+		    }
+		}
+	]
+}
+
+DEF CannonRope Transform {
+	translation -10.5 -8 0
+	scale 4 4 4
+	children [
+		Shape {
+			geometry IndexedLineSet {
+				coord Coordinate {
+				    point [
+					3.5 2.5 0.0 , 3.6 2.698 0.0 , 3.7 2.884 0.0 , 3.8 3.046 0.0 , 3.9 3.172 0.0 , 4 3.25 0.0 , 4.1 3.268 0.0 , 4.2 3.214 0.0 , 4.3 3.076 0.0 , 4.4 2.842 0.0 , 4.5 2.5 0.0 , 4.6 2.038 0.0 ]
+				}
+				color Color {
+				    color [
+				        0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4, 0.4 0.4 0.4
+				    ]
+			    }
+				coordIndex [
+					0 1 -1, 1 2 -1, 2 3 -1, 3 4 -1, 4 5 -1, 5 6 -1, 6 7 -1, 7 8 -1, 8 9 -1, 9 10 -1, 10 11 -1
+					]
+				colorIndex [
+					0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+					]
+					
+			}
+		}
+	]
+}
+
+
+DEF Clock TimeSensor {
+    cycleInterval 25.0
+}
+
+ROUTE TheTouchSensor.touchTime TO Clock.startTime
+ROUTE Clock.cycleTime TO SOUND.startTime
+
+
+# Viewpoint Animation
+DEF ViewpointPath PositionInterpolator {
+        key [ 0.0, 0.0695, 0.07, 0.6, 0.6005, 0.75, .7505, .90, .901, 1.0 ]
+        keyValue [
+                -100 10 -10,
+                -100 10 -10,
+                -17 5 40,
+                -17 5 40,
+                -90 5 50,
+                -90 5 50,
+                -17 10 40,
+                -17 10 40,
+		-50 10 90,
+		-50 10 90
+        ]
+}
+
+DEF InstructionScaler PositionInterpolator {
+        key [ 0.0, 0.005, .99, 1.0 ]
+        keyValue [
+                .8 1 1,
+		0 0 0,
+		0 0 0
+
+        ]
+}
+ROUTE Clock.fraction_changed TO ViewpointPath.set_fraction
+ROUTE ViewpointPath.value_changed TO Viewp.set_position
+
+ROUTE Clock.fraction_changed TO InstructionScaler.set_fraction
+ROUTE InstructionScaler.value_changed TO Instruction.set_scale
+ROUTE InstructionScaler.value_changed TO PlayBox.set_scale
+
+
+#Hands Animation
+
+
+Group {
+    children [
+        DEF Arms Transform {
+	     translation 38 -3 0
+	     rotation 0 0 1 -1.57
+     		scale 0.1 0.1 0.1
+	     children [
+		      Transform {
+			rotation 0 1 0 1.3
+	     		scale 0.1 0.1 0.1
+			children [
+			      Inline {
+				 url      "VRML/Hands.wrl"
+				 bboxSize -1 -1 -1
+			      }
+			 ]
+		       }
+		]
+        },
+
+        DEF Stone1 Transform {
+	     translation 8 1 1.5
+	     scale 0 0 0
+	     children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.4 0.4 0.4
+				}
+			}
+		    geometry Sphere {
+			radius 0.6
+		    }
+		}
+	    ]
+        },
+
+        DEF Stone2 Transform {
+	     translation 8 0.8 -1.5
+	     scale 0 0 0
+	     children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.4 0.4 0.4
+				}
+			}
+		    geometry Sphere {
+			radius 0.6
+		    }
+		}
+	    ]
+        },
+
+	DEF Stone1Path PositionInterpolator {
+	    key [
+	0, 0.19, .195, 0.20, .205, .21, .215, .22, .225, .23, .235, .24, .245, .25, .255, .26, .265, .27, .275, 0.28, 1.0
+	    ]
+	    keyValue [
+8 1 1.5, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 0, 8 1 1.5, 8 1 1.5
+	    ]
+	}
+
+	DEF Stone2Path PositionInterpolator {
+	    key [
+	0, 0.19, .195, 0.20, .205, .21, .215, .22, .225, .23, .235, .24, .245, .25, .255, .26, .265, .27, .275, 0.28, 1.0
+	    ]
+	    keyValue [
+9 0.8 -1.5, 9 0.8 -1.5, 8 0.8 -0.4, 8 0.8 -1.5,8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -0.4, 8 0.8 1.5, 8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -0.4, 8 0.8 -1.5, 8 0.8 -1.5
+	    ]
+	}
+
+
+	DEF ArmsPath PositionInterpolator {
+	    key [
+	0, 0.12 , 0.16, 0.165, 0.166, 0.188, 0.19, 0.28, 0.284, 0.99, 1.0
+	    ]
+	    keyValue [
+38 -4 0, 38 -4 0, 16 -4 0, 16 -4 0, 30 -4 0, 30 -4 0, 19 -4 0, 19 -4 0, 30 -4 0, 30 -3 0
+	    ]
+	}
+
+	DEF ArmsScaler PositionInterpolator {
+		key [ 0.12, 0.16, 0.19, 0.21, 0.284, 0.30, 1.0 ]
+		keyValue [
+		        60.0 60.5 60.0,
+		        80   60.5 60.0,
+		        80   60.5 60.0,
+		        80   60.5 60.0,
+		        80   60.5 60.0,
+		        60.0 60.5 60.0
+		        60.0 60.5 60.0,
+		]
+	}
+
+	DEF StonesScaler PositionInterpolator {
+		key [ 0, 0.19, 0.191, 0.28, 0.284, 1.0 ]
+		keyValue [
+		        0 0 0,
+			0 0 0,
+			1 1 1,
+			1 1 1,
+			0 0 0,
+			0 0 0			
+		]
+	}
+    ]
+}
+
+ROUTE Clock.fraction_changed TO ArmsPath.set_fraction
+ROUTE ArmsPath.value_changed TO Arms.set_translation
+ROUTE Clock.fraction_changed TO Stone1Path.set_fraction
+ROUTE Stone1Path.value_changed TO Stone1.set_translation
+ROUTE Clock.fraction_changed TO Stone2Path.set_fraction
+ROUTE Stone2Path.value_changed TO Stone2.set_translation
+
+ROUTE Clock.fraction_changed TO ArmsScaler.set_fraction
+ROUTE ArmsScaler.value_changed TO Arms.set_scale
+ROUTE Clock.fraction_changed TO StonesScaler.set_fraction
+ROUTE StonesScaler.value_changed TO Stone1.set_scale
+ROUTE StonesScaler.value_changed TO Stone2.set_scale
+
+
+#Cannon Animation
+
+DEF Walker PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 20.3 2 0, 20.3 2 0, 1.3 2 0, 1.3 2 0 ]
+}
+
+DEF WalkerTyre1 PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 19 0 2, 19 0 2, 0 0 2, 0 0 2 ]
+}
+
+DEF WalkerTyre2 PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 19 0 -2, 19 0 -2, 0 0 -2, 0 0 -2 ]
+}
+
+DEF WalkerJoinTyre PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 19 0 0, 19 0 0, 0 0 0, 0 0 0 ]
+}
+
+DEF WalkerSupportRod1 PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 20.3 0 1.3, 20.3 0 1.3, 1.3 0 1.3, 1.3 0 1.3 ]
+}
+
+DEF WalkerSupportRod2 PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 20.3 0 -1.3, 20.3 0 -1.3, 1.3 0 -1.3, 1.3 0 -1.3 ]
+}
+
+DEF WalkerBase PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 19.3 0 0, 19.3 0 0, .3 0 0, .3 0 0 ]
+}
+
+DEF WalkerCap PositionInterpolator {
+    key [ 0, 0.12 , 0.16, 0.99, 1.0 ]
+    keyValue [ 23.5 2.5 0, 23.5 2.5 0, 3.5 2.5 0, 3.5 2.5 0 ]
+}
+
+ROUTE Clock.fraction_changed TO Walker.set_fraction
+ROUTE Walker.value_changed TO CannonBody.set_translation
+ROUTE Walker.value_changed TO CannonPathway.set_translation
+
+ROUTE Clock.fraction_changed TO WalkerTyre1.set_fraction
+ROUTE WalkerTyre1.value_changed TO Tyre1.set_translation
+ROUTE Clock.fraction_changed TO WalkerTyre2.set_fraction
+ROUTE WalkerTyre2.value_changed TO Tyre2.set_translation
+
+ROUTE Clock.fraction_changed TO WalkerJoinTyre.set_fraction
+ROUTE WalkerJoinTyre.value_changed TO JoinTyre.set_translation
+
+ROUTE Clock.fraction_changed TO WalkerSupportRod1.set_fraction
+ROUTE WalkerSupportRod1.value_changed TO Rod1.set_translation
+ROUTE Clock.fraction_changed TO WalkerSupportRod2.set_fraction
+ROUTE WalkerSupportRod2.value_changed TO Rod2.set_translation
+
+ROUTE Clock.fraction_changed TO WalkerBase.set_fraction
+ROUTE WalkerBase.value_changed TO CannonBase.set_translation
+ROUTE Clock.fraction_changed TO WalkerCap.set_fraction
+ROUTE WalkerCap.value_changed TO CannonCap.set_translation
+
+
+DEF Scaler PositionInterpolator {
+	key [ 0.0, 0.44, 0.4475, .455, .4625, .470, .4775, .485, .4925, .500, .51, 0.52, 0.5275, .56, 0.57, 0.58, 0.60, .8, .82, 0.99, 1.0 ]
+	keyValue [
+		1.0 1.0 1.0,
+		1.0 1.0 1.0,
+		1.5 1.0 1.5,
+		1.0 1.0 1.0,
+		1.5 1.0 1.5,
+		1.0 1.0 1.0,
+		1.5 1.0 1.5,
+		1.0 1.0 1.0,
+		1.5 1.0 1.5,
+		1.0 1.0 1.0,
+		1.5 1.0 1.5,
+		1.0 1.0 1.0,
+		1.5 1.0 1.5,
+		1.5 1.0 1.5,
+		1.2 1.1 1.2,
+		0.9 1.5 1.5,
+		1.0 1.0 1.0,
+		1.0 1.0 1.0,
+		0 0 0,
+		0 0 0
+	]
+}
+
+DEF ScalerPathway PositionInterpolator {
+        key [ 0.0, 0.5, 1.0 ]
+        keyValue [
+                1.0 1.0 1.0,
+                2 1 2,
+                1.0 1.0 1.0,
+        ]
+}
+
+
+ROUTE Clock.fraction_changed TO Scaler.set_fraction
+ROUTE Scaler.value_changed TO CannonBody.set_scale
+ROUTE Clock.fraction_changed TO ScalerPathway.set_fraction
+ROUTE Scaler.value_changed TO CannonPathway.set_scale
+
+DEF Clock2 TimeSensor {
+        cycleInterval 1.0
+        loop TRUE
+        startTime 4.0
+        stopTime 1.0
+}
+
+DEF Colorer ColorInterpolator {
+        key [ 0.0, 0.5, 1.0 ]
+        keyValue [
+                0.4 0.4 0.4,
+                0.05 0.05 0.05,
+                0.2 0.2 0.2,
+        ]
+}
+
+ROUTE Clock2.fraction_changed TO Colorer.set_fraction
+ROUTE Colorer.value_changed TO CannonColor.set_diffuseColor
+ROUTE Colorer.value_changed TO CannonPathwayColor.set_diffuseColor
+# ROUTE Colorer.value_changed TO StatueBoxColor.set_diffuseColor
+
+
+DEF RopeScaler PositionInterpolator {
+        key [ 0.0, 0.28, 0.32, 1.0 ]
+        keyValue [
+                4 4 4,
+                4 4 4,
+		0 0 0,
+                0 0 0
+        ]
+}
+ROUTE Clock.fraction_changed TO RopeScaler.set_fraction
+ROUTE RopeScaler.value_changed TO CannonRope.set_scale
+
+DEF WalkerRope PositionInterpolator {
+        key [ 0.0, 0.12, 0.16, 0.28, 0.32, 0.99, 1.0 ]
+        keyValue [
+		8.5 -8 0,
+		8.5 -8 0,
+		-10.5 -8 0,
+		-10.5 -8 0,
+		1.5 1 0,
+		-10.5 -8 0,
+        ]
+}
+ROUTE Clock.fraction_changed TO WalkerRope.set_fraction
+ROUTE WalkerRope.value_changed TO CannonRope.set_translation
+
+DEF CannonScaler PositionInterpolator {
+        key [ 0.0, 0.8, .82, .99, 1.0 ]
+        keyValue [
+		1 1 1,
+		1 1 1,
+		0 0 0,
+		0 0 0
+        ]
+}
+ROUTE Clock.fraction_changed TO CannonScaler.set_fraction
+ROUTE CannonScaler.value_changed TO Tyre1.set_scale
+ROUTE CannonScaler.value_changed TO Tyre2.set_scale
+ROUTE CannonScaler.value_changed TO JoinTyre.set_scale
+ROUTE CannonScaler.value_changed TO Rod1.set_scale
+ROUTE CannonScaler.value_changed TO Rod2.set_scale
+ROUTE CannonScaler.value_changed TO CannonBase.set_scale
+ROUTE CannonScaler.value_changed TO CannonCap.set_scale
+
+DEF Ashes Transform {
+   translation 4 -5 -8
+   scale  0 0 0
+   rotation 0 1 0 1.4
+   children [
+      Inline {
+         url      "VRML/ashes.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+DEF AshScaler PositionInterpolator {
+        key [ 0.0, 0.83, .831, .99, 1.0 ]
+        keyValue [
+		0 0 0,
+		0 0 0,
+		4 2 3,
+		4 2 3
+        ]
+}
+
+ROUTE Clock.fraction_changed TO AshScaler.set_fraction
+ROUTE AshScaler.value_changed TO Ashes.set_scale
+
+
+
+#Flames Animation
+
+DEF FlameScaler PositionInterpolator {
+        key [ 0.0, 0.279, 0.28, 0.294, 0.295, 0.32, 0.34, 0.36, 0.375, 0.39, 0.40, 0.42, 1.0 ]
+        keyValue [
+                0 0 0,
+		0 0 0,
+                5 5 5,
+                5 5 5,
+                0 0 0,
+                0 0 0,
+                5 10 5,
+                0 0 0,
+                7.5 15 7.5,
+		0 0 0,
+		0 0 0,
+		0 0 0,
+                0 0 0
+        ]
+}
+ROUTE Clock.fraction_changed TO FlameScaler.set_fraction
+ROUTE FlameScaler.value_changed TO Flames.set_scale
+
+DEF FlamePath PositionInterpolator {
+        key [ 0.0, 0.279, 0.28, 0.294, 0.32, 0.34, 0.36, 0.375, 0.39, 0.40, 0.42, .8, .815, 0.86, 1.0 ]
+        keyValue [
+                3.4 2.5 -.8,
+                3.4 2.5 -.8,
+		7.4 .5 -.8,
+		7.4 1.5 -.8,
+                3.4 2.5 -.8,
+                3.4 2.5 -.8,
+                3.4 2.5 -.8,
+                3.4 5.5 -.8,
+                3.4 5.5 -.8,
+                3.4 8.5 -.8,
+                3.4 8.5 -.8,
+                3.4 8.5 -.8,
+                3.4 8.5 -.8,
+        ]
+}
+ROUTE Clock.fraction_changed TO FlamePath.set_fraction
+ROUTE FlamePath.value_changed TO Flames.set_translation
+
+
+DEF FlameScaler2 PositionInterpolator {
+        key [ 0.0, .8, .81, .815, .82, .825, .83, .84, .85, .86, .87, .99, 1.0 ]
+        keyValue [
+                0 0 0,
+                0 0 0,
+		5 5 5,
+		25 15 20
+		0 0 0,
+		5 5 5,
+		0 0 0,
+		13 10 10,
+                0 0 0,
+		5 5 5,
+		0 0 0,
+		0 0 0
+        ]
+}
+
+DEF FlameScaler3 PositionInterpolator {
+        key [ 0.0, .8, .81, .82, .83, .84, .85, .86, .99, 1.0 ]
+        keyValue [
+                0 0 0,
+                0 0 0,
+		5 5 5,
+		0 0 0,
+		24 20 20
+                0 0 0
+		15 10 10,
+                0 0 0
+		0 0 0
+        ]
+}
+ROUTE Clock.fraction_changed TO FlameScaler2.set_fraction
+ROUTE Clock.fraction_changed TO FlameScaler3.set_fraction
+ROUTE FlameScaler3.value_changed TO Flames2.set_scale
+ROUTE FlameScaler2.value_changed TO Flames3.set_scale
+ROUTE FlameScaler3.value_changed TO Flames4.set_scale
+ROUTE FlameScaler2.value_changed TO Flames5.set_scale
+ROUTE FlameScaler3.value_changed TO Flames6.set_scale
+ROUTE FlameScaler2.value_changed TO Flames7.set_scale
+
+
+
+
+##Tree Animation
+
+#Grass
+Transform {
+	rotation 0 1 0 1.57
+	translation -100 -2 0
+	children [
+		DEF Grass Shape {
+
+		    appearance Appearance {
+
+			material Material {
+				diffuseColor 0.29 1.29 0.1
+			}
+
+		    }
+
+		    geometry IndexedFaceSet {
+
+			coord Coordinate {
+
+			    point [ 5 0 0, 4.5 0 1, 4 0 2, 3 0 2.5, 2 0 3,
+				    4 0 4, 0 0 5, -1 0 4.5, -2 0 4, -2.5 0 3.2,
+				   -3 0 2.5, -3.5 0 2.5, -4 0 0.5, -3.5 0 -1, -3.5 0 -2,
+				   -3.2 0 -3, -3 0 -4,  -2 0 -4.2, -1 0 -4.6, 0 0 -4.5,
+				    1 0 -4, 2 0 -3.5, 3 0 -3, 4 0 -2, -4.5 0 -1,
+
+				    5 0.3 0, 4.5 0.35 1, 4 0.1 2, 3 0.5 2.5, 2 1.5 3,
+				    4 0.3 4, 0 0.9 5, -1 1.5 4.5, -2 0.5 4, -2.5 1 3.2,
+				   -3 0.2 2.5, -3.5 0.4 2.5, -4 0.2 0.5, -3.5 0.3 -1, -3.5 0.3 -2,
+				   -3.2 0.8 -3, -3 0.2 -4,  -2 0.7 -4.2, -1 2 -4.6, 0 0.4 -4.5,
+				    1 2.5 -4, 2 0.8 -3.5, 3 0.4 -3, 4 0.2 -2, -4.5 0.1 -1
+
+			    ]
+
+			}
+
+			coordIndex [ 1, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1      
+				    25, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36 , 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, -1]
+
+		    }
+
+		}
+	]
+}
+
+
+DEF human1 Transform {
+   translation -125 -4.7 -80
+   scale 7 7 7
+   rotation 0 1 0 .5
+   children [
+      Inline {
+         url      "VRML/Person.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+
+
+DEF ghar1 Transform {
+   translation -38 0 -97
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar2 Transform {
+   translation -100 0 -95
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar3 Transform {
+   translation -150 0 -100
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar4 Transform {
+   translation -70 0 -98
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar5 Transform {
+   translation -85 0 -80
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar6 Transform {
+   translation -167 0 -118
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar7 Transform {
+   translation -200 0 -79
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar8 Transform {
+   translation -127 0 -67
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar9 Transform {
+   translation -173 0 -92
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar10 Transform {
+   translation -187 0 -133
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+DEF ghar11 Transform {
+   translation 36 0 -117
+   scale 0.6 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}DEF ghar12 Transform {
+   translation -16 0 -32
+   scale .7 .5 .5
+   rotation 0 1 0 0.3
+   children [
+      Inline {
+         url      "VRML/ghar.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+
+
+
+
+
+
+DEF trees Transform {
+   translation -127 -3 -15
+   scale 0.6 0.6 1
+   children [
+      Inline {
+         url      "VRML/Trees.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}DEF trees1 Transform {
+   translation -130 -5 -103
+   scale 1 0.7 1
+   children [
+      Inline {
+         url      "VRML/Trees.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}DEF trees2 Transform {
+   translation -5 -5 -37
+   scale 1 1 1
+   children [
+      Inline {
+         url      "VRML/Trees.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}DEF trees3 Transform {
+   translation -55 -5 -80
+   scale 1 0.8 1
+   children [
+      Inline {
+         url      "VRML/Trees.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}DEF trees4 Transform {
+   translation -100 -5 -138
+   scale 1 0.7 1
+   rotation 0 1 0 1.4
+   children [
+      Inline {
+         url      "VRML/Trees.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+DEF MainTree Transform {
+   translation -100 -2 0
+   scale 0.5 0.5 0.5
+   children [
+      Inline {
+         url      "VRML/Trees.wrl"
+         bboxSize -1 -1 -1
+      }
+     ]
+}
+
+DEF TreeRotation OrientationInterpolator {
+        key [ 0.0, 0.68, 0.69, 0.74, 0.7475, 0.75, 1.0 ]
+        keyValue [
+		0 0 1 0, 0 0 1 0, 0 0 1 .3, 0 0 1 .3, 0 0 1 -.3, 0 0 1 0, 0 0 1 0
+        ]
+}
+ROUTE Clock.fraction_changed TO TreeRotation.set_fraction
+ROUTE TreeRotation.value_changed TO MainTree.rotation
+
+
+
+#Ball Animation
+Group {
+    children [
+
+        DEF Ball Transform {
+		scale 0 0 0
+	     children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 0.2 0.2 0.2
+					}
+				}
+			    geometry Sphere {
+				radius 1
+			    }
+			}
+		]
+        },
+
+
+	DEF BallPath PositionInterpolator {
+	    key [
+	0, 0.57, 0.571143, 0.572286, 0.573429, 0.574571, 0.575714, 0.576857, 0.578, 0.579143, 0.580286, 0.581429, 0.582571, 0.583714, 0.584857, 0.586, 0.587143, 0.588286, 0.589429, 0.590571, 0.591714, 0.592857, 0.594, 0.595143, 0.596286, 0.597429, 0.598571, 0.599714, 0.600857, 0.602, 0.603143, 0.604286, 0.605429, 0.606571, 0.607714, 0.608857, 0.61, 0.612286, 0.613429, 0.614571, 0.615714, 0.616857, 0.618, 0.619143, 0.620286, 0.621429, 0.622571, 0.623714, 0.624857, 0.626, 0.627143, 0.628286, 0.629429, 0.630571, 0.631714, 0.632857, 0.634, 0.635143, 0.636286, 0.637429, 0.638571, 0.639714, 0.640857, 0.642, 0.643143, 0.644286, 0.645429, 0.646571, 0.647714, 0.648857, 0.65, 0.651143, 0.652286, 0.653429, 0.654571, 0.655714, 0.656857, 0.658, 0.659143, 0.660286, 0.661429, 0.662571, 0.663714, 0.664857, 0.666, 0.667143, 0.668286, 0.669429, 0.670571, 0.671714, 0.672857, 0.674, 0.675143, 0.676286, 0.678571, 0.679714, 0.680857, 0.682, 0.683143, 0.684286, 0.685429, 0.686571, 0.687714, 0.688857, 0.69, 
+0.74, 0.740571, 0.741143, 0.741714, 0.742286, 0.742857, 0.743429, 0.744, 0.744571, 0.745143, 0.745714, 0.746286, 0.746857, 0.747429, 0.748, 0.748571, 0.749143, 0.749714, 0.750286, 0.750857, 0.751429, 0.752, 0.752571, 0.753143, 0.753714, 0.754286, 0.754857, 0.755429, 0.756, 0.756571, 0.757143, 0.757714, 0.758286, 0.758857, 0.759429, 0.76, 0.760571, 0.761143, 0.761714, 0.762286, 0.762857, 0.763429, 0.764, 0.764571, 0.765143, 0.765714, 0.766286, 0.766857, 0.767429, 0.768, 0.768571, 0.769143, 0.769714, 0.770286, 0.770857, 0.771429, 0.772, 0.772571, 0.773143, 0.773714, 0.774286, 0.774857, 0.775429, 0.776, 0.776571, 0.777143, 0.777714, 0.778286, 0.778857, 0.779429, 0.78, 0.780571, 0.781143, 0.781714, 0.782286, 0.782857, 0.783429, 0.784, 0.784571, 0.785143, 0.785714, 0.786286, 0.786857, 0.787429, 0.788, 0.788571, 0.789143, 0.789714, 0.790286, 0.790857, 0.791429, 0.792, 0.792571, 0.793143, 0.793714, 0.794286, 0.794857, 0.795429, 0.796, 0.796571, 0.797143, 0.797714, 0.798286, 0.798857, 0.799429, 0.80, 1.00 
+	    ]
+	    keyValue [
+-1.3 4.06457 0, -1.3 4.06457 0, -3 5.42028 0, -4 6.35828 0, -5 7.27856 0, -6 8.18113 0, -8 9.93313 0, -9 10.7826 0, -10 11.6143 0, -11 12.4283 0, -12 13.2245 0, -13 14.0031 0, -14 14.764 0, -15 15.5071 0, -16 16.2325 0, -17 16.9402 0, -19 18.3025 0, -20 18.957 0, -21 19.5939 0, -22 20.213 0, -23 20.8144 0, -24 21.3981 0, -25 21.9641 0, -26 22.5124 0, -27 23.043 0, -28 23.5558 0, -29 24.0509 0, -30 24.5283 0, -31 24.988 0, -32 25.43 0, -33 25.8543 0, -34 26.2609 0, -35 26.6497 0, -36 27.0208 0, -37 27.3742 0, -38 27.7099 0, -39 28.0279 0, -40 28.3282 0, -41 28.6107 0, -42 28.8756 0, -43 29.1227 0, -44 29.3521 0, -45 29.5638 0, -46 29.7577 0, -47 29.934 0, -48 30.0926 0, -49 30.2334 0, -50 30.3565 0, -51 30.4619 0, -52 30.5496 0, -53 30.6196 0, -54 30.6718 0, -55 30.7064 0, -56 30.7232 0, -57 30.7223 0, -58 30.7037 0, -59 30.6674 0, -60 30.6134 0, -61 30.5416 0, -62 30.4522 0, -63 30.345 0, -64 30.2201 0, -65 30.0775 0, -66 29.9172 0, -67 29.7391 0, -68 29.5434 0, -69 29.3299 0, -70 29.0988 0, -71 28.8499 0, -72 28.5833 0, -73 28.2989 0, -74 27.9969 0, -75 27.6771 0, -76 27.3397 0, -77 26.9845 0, -78 26.6116 0, -79 26.221 0, -80 25.8127 0, -81 25.3866 0, -82 24.9429 0, -83 24.4814 0, -84 24.0022 0, -85 23.5053 0, -86 22.9907 0, -87 22.4584 0, -88 21.9083 0, -89 21.3406 0, -90 20.7551 0, -91 20.1519 0, -92 19.531 0, -93 18.8924 0, -94 18.236 0, -95 17.562 0, -96 16.8702 0, -97 16.1608 0, -98 15.4336 0, -99 14.6887 0, -100 13.926 0, -100.5 13.1457 0,
+-101 13.1457 0, -102 12.3477 0, -103 11.5319 0, -104 10.6984 0, -104 10.6984 0,  -104 10.6984 0, 
+
+-104 10.6984 0,  -103 11.5319 0, -102 12.3477 0, -101 13.1457 0, -100 13.926 0, -99 14.6887 0, -98 15.4336 0, -97 16.1608 0, -96 16.8702 0, -95 17.562 0, -94 18.236 0, -93 18.8924 0, -92 19.531 0, -91 20.1519 0, -90 20.7551 0, -89 21.3406 0, -88 21.9083 0, -87 22.4584 0, -86 22.9907 0, -85 23.5053 0, -84 24.0022 0, -83 24.4814 0, -82 24.9429 0, -81 25.3866 0, -80 25.8127 0, -79 26.221 0, -78 26.6116 0, -77 26.9845 0, -76 27.3397 0, -75 27.6771 0, -74 27.9969 0, -73 28.2989 0, -72 28.5833 0, -71 28.8499 0, -70 29.0988 0, -69 29.3299 0, -68 29.5434 0, -67 29.7391 0, -66 29.9172 0, -65 30.0775 0, -64 30.2201 0, -63 30.345 0, -62 30.4522 0, -61 30.5416 0, -60 30.6134 0, -59 30.6674 0, -58 30.7037 0, -57 30.7223 0, -56 30.7232 0, -55 30.7064 0, -54 30.6718 0, -53 30.6196 0, -52 30.5496 0, -51 30.4619 0, -50 30.3565 0, -49 30.2334 0, -48 30.0926 0, -47 29.934 0, -46 29.7577 0, -45 29.5638 0, -44 29.3521 0, -43 29.1227 0, -42 28.8756 0, -41 28.6107 0, -40 28.3282 0, -39 28.0279 0, -38 27.7099 0, -37 27.3742 0, -36 27.0208 0, -35 26.6497 0, -34 26.2609 0, -33 25.8543 0, -32 25.43 0, -31 24.988 0, -30 24.5283 0, -29 24.0509 0,  -27 23.043 0, -26 22.5124 0, -25 21.9641 0, -24 21.3981 0, -23 20.8144 0, -22 20.213 0, -21 19.5939 0, -20 18.957 0, -19 18.3025 0,-17 16.9402 0, -16 16.2325 0, -15 15.5071 0, -14 14.764 0, -13 14.0031 0, -12 13.2245 0, -11 12.4283 0, -10 11.6143 0, -9 10.7826 0, -7 9.06599 0, -6 8.18113 0, -5 7.27856 0, -3 6.35828 0, -3 5.42028 0, -1 4.46457 0, 0 3.49114 0, 1 2.5 0, 2 1.49114 0, 3 0.464571 0, 3 -0.179717 0, 3 -0.179717 0
+	    ]
+	}
+
+	DEF BallScaler PositionInterpolator {
+		key [ 0, 0.56, 0.57, 0.59, 0.65, 0.69, .80, .81, .99, 1.0, ]
+		keyValue [ 0 0 0, 0 0 0, 1 1 1, 1 1 1, 1.5 1.5 1.5, 1 1 1, 1 1 1, 0 0 0, 0 0 0]
+	}
+    ]
+}
+
+ROUTE Clock.fraction_changed TO BallPath.set_fraction
+ROUTE BallPath.value_changed TO Ball.set_translation
+ROUTE Clock.fraction_changed TO BallScaler.set_fraction
+ROUTE BallScaler.value_changed TO Ball.set_scale
+
