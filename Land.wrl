@@ -1,0 +1,42 @@
+#VRML V2.0 utf8
+
+
+
+
+Group {
+  children [
+      Transform {
+        translation 0 -3.5 10
+        children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0 .6 0
+                }
+                textureTransform TextureTransform {
+                  scale 20 20
+                }
+              }
+              geometry Box {
+                size 200 1 200
+              }
+            }
+        ]
+      }
+  ]
+}
+Group {
+  children [
+      Transform {
+        rotation 0 1 0 2.7
+        scale 0.01 0.01 0.01
+        translation 5 12.3 42
+        children [
+            Inline {
+              url [ "StatueMan.wrl"  ]
+            }
+        ]
+      }
+  ]
+}
+
