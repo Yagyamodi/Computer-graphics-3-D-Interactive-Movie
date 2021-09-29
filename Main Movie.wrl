@@ -1,4 +1,4 @@
-#VRML V2.0 utf8
+#V2.0 utf8
 
 #Background
 DEF WhiteBackground Background {
@@ -22,7 +22,7 @@ Sound {
    maxFront 50
    maxBack 50
    source DEF SOUND AudioClip {
-      url "VRML/WhatsApp Video 2020-09-13 at 1.38.03 PM.wav"
+      url "WhatsApp Video 2020-09-13 at 1.38.03 PM.wav"
    }
 }
 
@@ -33,7 +33,7 @@ DEF Land Transform {
    scale 1.5 1.5 1.7
    children [
       Inline {
-         url      "VRML/Land.wrl"
+         url      "Land.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -56,7 +56,7 @@ Transform {
 				material Material {
 				  diffuseColor 0.9 .9 .9
 				}
-				texture  ImageTexture { url "VRML/play.jpg"}
+				texture  ImageTexture { url "play.jpg"}
 			      }
 			    }
 		     ]
@@ -140,7 +140,7 @@ DEF Roll Transform {
 		
 		  Shape {
 		    geometry Text {
-		      string [ "Radhika Singh: 18075046" "Yagya Modi: 18075064" ]
+		      string ["Yagya Modi: 18075064" ]
 		      fontStyle FontStyle {
 			justify [ "MIDDLE" "MIDDLE"  ] 
 			size 2
@@ -163,7 +163,7 @@ DEF Mount2 Transform {
    scale 9 14.5 10
    children [
       DEF Mountain2 Inline {
-         url      "VRML/Hill1.wrl"
+         url      "Hill1.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -177,7 +177,7 @@ DEF Mount Transform {
    scale 110 60 45
    children [
       DEF Mountain Inline {
-         url      "VRML/Hill2.wrl"
+         url      "Hill2.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -203,7 +203,7 @@ DEF Cloud Transform {
    translation -44 5 -160
    children [
       Inline {
-         url      "VRML/clouds.wrl"
+         url      "clouds.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -215,7 +215,7 @@ DEF Cloud2 Transform {
    rotation 0 1 0 2.7
    children [
       Inline {
-         url      "VRML/clouds.wrl"
+         url      "clouds.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -228,7 +228,7 @@ DEF Flames Transform {
    scale 0 0 0
    children [
       Inline {
-         url      "VRML/Flames.wrl"
+         url      "Flames.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -239,7 +239,7 @@ DEF Flames2 Transform {
    scale 0 0 0
    children [
       Inline {
-	 url      "VRML/Flames.wrl"
+	 url      "Flames.wrl"
 	 bboxSize -1 -1 -1
       }
    ]
@@ -250,7 +250,7 @@ DEF Flames3 Transform {
    scale 0 0 0
    children [
       Inline {
-	 url      "VRML/Flames.wrl"
+	 url      "Flames.wrl"
 	 bboxSize -1 -1 -1
       }
    ]
@@ -261,7 +261,7 @@ DEF Flames4 Transform {
    scale 0 0 0
    children [
       Inline {
-	 url      "VRML/Flames.wrl"
+	 url      "Flames.wrl"
 	 bboxSize -1 -1 -1
       }
    ]
@@ -272,7 +272,7 @@ DEF Flames5 Transform {
    scale 0 0 0
    children [
       Inline {
-	 url      "VRML/Flames.wrl"
+	 url      "Flames.wrl"
 	 bboxSize -1 -1 -1
       }
    ]
@@ -283,7 +283,7 @@ DEF Flames6 Transform {
    scale 0 0 0
    children [
       Inline {
-	 url      "VRML/Flames.wrl"
+	 url      "Flames.wrl"
 	 bboxSize -1 -1 -1
       }
    ]
@@ -294,7 +294,7 @@ DEF Flames7 Transform {
    scale 0 0 0
    children [
       Inline {
-	 url      "VRML/Flames.wrl"
+	 url      "Flames.wrl"
 	 bboxSize -1 -1 -1
       }
    ]
@@ -568,7 +568,7 @@ Group {
 	     		scale 0.1 0.1 0.1
 			children [
 			      Inline {
-				 url      "VRML/Hands.wrl"
+				 url      "Hands.wrl"
 				 bboxSize -1 -1 -1
 			      }
 			 ]
@@ -857,7 +857,7 @@ DEF Ashes Transform {
    rotation 0 1 0 1.4
    children [
       Inline {
-         url      "VRML/ashes.wrl"
+         url      "ashes.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1020,7 +1020,7 @@ DEF human1 Transform {
    rotation 0 1 0 .5
    children [
       Inline {
-         url      "VRML/Person.wrl"
+         url      "Person.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1033,7 +1033,7 @@ DEF ghar1 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1043,7 +1043,7 @@ DEF ghar2 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1053,7 +1053,7 @@ DEF ghar3 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1063,7 +1063,7 @@ DEF ghar4 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1073,7 +1073,7 @@ DEF ghar5 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1083,7 +1083,7 @@ DEF ghar6 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1093,7 +1093,7 @@ DEF ghar7 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1103,7 +1103,7 @@ DEF ghar8 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1113,7 +1113,7 @@ DEF ghar9 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1123,7 +1123,7 @@ DEF ghar10 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1133,7 +1133,7 @@ DEF ghar11 Transform {
    scale 0.6 0.5 0.5
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1143,7 +1143,7 @@ DEF ghar11 Transform {
    rotation 0 1 0 0.3
    children [
       Inline {
-         url      "VRML/ghar.wrl"
+         url      "ghar.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1160,7 +1160,7 @@ DEF trees Transform {
    scale 0.6 0.6 1
    children [
       Inline {
-         url      "VRML/Trees.wrl"
+         url      "Trees.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1169,7 +1169,7 @@ DEF trees Transform {
    scale 1 0.7 1
    children [
       Inline {
-         url      "VRML/Trees.wrl"
+         url      "Trees.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1178,7 +1178,7 @@ DEF trees Transform {
    scale 1 1 1
    children [
       Inline {
-         url      "VRML/Trees.wrl"
+         url      "Trees.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1187,7 +1187,7 @@ DEF trees Transform {
    scale 1 0.8 1
    children [
       Inline {
-         url      "VRML/Trees.wrl"
+         url      "Trees.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1197,7 +1197,7 @@ DEF trees Transform {
    rotation 0 1 0 1.4
    children [
       Inline {
-         url      "VRML/Trees.wrl"
+         url      "Trees.wrl"
          bboxSize -1 -1 -1
       }
      ]
@@ -1208,7 +1208,7 @@ DEF MainTree Transform {
    scale 0.5 0.5 0.5
    children [
       Inline {
-         url      "VRML/Trees.wrl"
+         url      "Trees.wrl"
          bboxSize -1 -1 -1
       }
      ]
