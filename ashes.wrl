@@ -1,0 +1,26 @@
+#VRML V2.0 utf8
+#  ArcView 3.0/3D Analyst Extension
+#  ESRI
+#
+Group {
+  children [
+	   DEF cone1  Transform {
+		  translation 0 0 0
+		  children [
+			  Shape	{appearance Appearance {		
+				  material Material {
+					transparency 0.2
+				}
+				  texture  ImageTexture { 
+					  url "ash.jpg"}
+			  }
+				  geometry Cone	{
+					  bottomRadius 5 
+        			  height 1 
+    			      bottom FALSE 
+				  }
+			  }
+		  ]
+	  } 
+  ]
+}
